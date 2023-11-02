@@ -10,3 +10,9 @@ edit:
 	chapters/ch02.tex \
 	chapters/ch03.tex \
 	chapters/ch04.tex \
+
+git:
+	git add .
+	git commit -m "edit"
+	git push
+	
