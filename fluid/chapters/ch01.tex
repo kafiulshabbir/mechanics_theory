@@ -188,26 +188,35 @@
 
 	Taking integral on both sides:
 	\eqb
-		\int_{\vec{a}}^{\vec{b}} \vec{f_{g}} \cdot d\vec{l}
-			= \int_{\vec{a}}^{\vec{b}} dp 
+		\int_{\vec{r_1}}^{\vec{r_2}} \vec{f_{g}} \cdot d\vec{l}
+			= \int_{\vec{r_1}}^{\vec{r_2}} dp 
 	\eqe
 	
 	\eqb
-		p(\vec{b}) - p(\vec{a}) = \int_{\vec{a}}^{\vec{b}} \vec{f_{g}} \cdot d\vec{l}
+		p(\vec{r_2}) - p(\vec{r_1}) = \int_{\vec{r_1}}^{\vec{r_2}} \vec{f_{g}} \cdot d\vec{l}
 	\eqe
 	
 	Because of this, the fluid at the bottom of arbitary shaped tank is the same.
 	
 	\eqb
-		p(\vec{b}) - p(\vec{a}) = \int_{\vec{a}}^{\vec{b}} \rho \vec{g} \cdot d\vec{l}
+		p(\vec{r_2}) - p(\vec{r_1}) = \int_{\vec{r_1}}^{\vec{r_2}} \rho \vec{g} \cdot d\vec{l}
 	\eqe
 	
 	For constant density and gravity $\vec{g} = -g\vec{j}$:
 	\eqb
-		p(\vec{b}) - p(\vec{a}) = \rho g \int_{\vec{a}}^{\vec{b}} -\vec{j} \cdot d\vec{l}
+		p(\vec{r_2}) - p(\vec{r_1}) = \rho g \int_{\vec{r_1}}^{\vec{r_2}} -\vec{j} \cdot d\vec{l}
 	\eqe
 	
 	\eqb
-		p(\vec{b}) - p(\vec{a}) = \rho g \int_{\vec{a}}^{\vec{b}} -\vec{j} \cdot d\vec{l}
+		p(\vec{r_2}) - p(\vec{r_1}) = -\rho g \int_{\vec{r_1}}^{\vec{r_2}} y
 	\eqe
+	
+	\eqb
+		p_2 - p_1 = -\rho g (y_2 - y_1)
+	\eqe
+	
+	\eqb
+		p + \rho g y = const
+	\eqe
+	
 	
