@@ -1,2 +1,213 @@
-\section{Pressure}
-	\subsection{Fluid pressure on direction}
+\section{Surface direction and pressure}
+	In the the prism.
+	
+	The forces are given by:
+	
+	\eqb
+		F_x = p_x \Delta y d
+	\eqe
+	
+	\eqb
+		F_y = p_y \Delta x d
+	\eqe
+	
+	\eqb
+		F_n = p_n \Delta s d
+	\eqe
+	
+	Relation between the surface areas:
+	
+	\eqb
+		\Delta x = \Delta s \cos(\theta)
+	\eqe
+	
+	\eqb
+		\Delta y = \Delta s \sin(\theta)
+	\eqe
+	
+	Forces in terms of $\Delta s$:
+	
+	\eqb
+		F_x = p_x \Delta s \sin(\theta) d
+	\eqe
+	
+	\eqb
+		F_y = p_y \Delta s \cos(\theta) d
+	\eqe
+	
+	\eqb
+		F_n = p_n \Delta s d
+	\eqe
+	
+	Balance of forces:
+	\eqb
+		F_x = F_n \sin(\theta)
+	\eqe
+	
+	\eqb
+		F_y = F_n \cos(\theta)
+			+ \rho \frac{1}{2} \Delta x \Delta y d  g
+	\eqe
+	
+	Balance of pressures:
+	\eqb
+		p_x \Delta s \sin(\theta) d
+			= (p_n \Delta s d) \sin(\theta)
+	\eqe
+	
+	\eqb
+		p_y \Delta s \cos(\theta) d
+			= (p_n \Delta s d) \cos(\theta)
+			+ \rho \frac{1}{2} \Delta x \Delta y d  g
+	\eqe
+	
+	Simplifying:
+	\eqb
+		p_x = p_n 
+	\eqe
+	
+	\eqb
+		p_y = pP_n
+			+ \rho \frac{1}{2}
+			\frac{\Delta x \Delta y}{\Delta s \cos(\theta)}  g
+	\eqe
+	
+	\eqb
+		p_y = p_n + \rho \frac{1}{2} \Delta y  g
+	\eqe
+	
+	For small prism:
+	\eqb
+		\Delta y \to 0
+	\eqe
+
+	\eqb
+		p_y = p_n
+	\eqe
+	
+	Pressure does not depend on the orientation of the surface.
+	
+\section{Difference of pressures between two points}
+	Consider a cube.
+	
+	Along the $x-axis$, the forces:
+	\eqb
+		F_x(x) = p(x) dy dz 
+	\eqe
+	
+	\eqb
+		F_x(x + dx) = -p(x + dx) dy dz
+	\eqe
+	
+	The net force:
+	\eqb
+		dF_x = F_x(x) + F_x(x + dx)
+	\eqe
+	
+	\eqb
+		dF_x = p(x) dy dz  -p(x + dx) dy dz
+	\eqe
+	
+	\eqb
+		dF_x = -(p(x + dx) - p(x)) dy dz
+	\eqe
+	
+	\eqb
+		dF_x = -\frac{\partial p}{\partial x} dx dy dz
+	\eqe
+	
+	The infinitesimal volume is given by:
+	\eqb
+		dV = dx dy dz
+	\eqe
+	
+	Let $f$ be force per unit volume:
+	\eqb
+		f = \frac{dF}{dV}
+	\eqe
+	
+	Then:
+	\eqb
+		f_x = -\frac{\partial p}{\partial x}
+	\eqe
+	
+	\eqb
+		\vec{f} = -\left( 
+		 \frac{\partial p}{\partial x} \vec{i}
+			+ \frac{\partial p}{\partial y} \vec{j}
+			+ \frac{\partial p}{\partial z} \vec{k}
+			\right)
+	\eqe
+	
+	\eqb \label{eq:f-is-grad-of-p}
+		\vec{f_{p}} = -\nabla p
+	\eqe
+	
+	\eqb
+		p = p(x, y, z)
+	\eqe
+	
+	\eqb
+		dp = \frac{\partial p}{\partial x} dx
+			+ \frac{\partial p}{\partial y} dy
+			+ \frac{\partial p}{\partial z} dz
+	\eqe
+	
+	\eqb
+		d\vec{l} = dx \vec{i} + dy \vec{j} + dz \vec{k}
+	\eqe
+	
+	\eqb
+		dp = (\nabla p) \cdot d\vec{l}
+	\eqe
+	
+	Taking dot product of $d\vec{l}$ on both sides of equation \ref{eq:f-is-grad-of-p}
+	\eqb
+		\vec{f_{p}} \cdot d\vec{l} = -(\nabla p) \cdot d\vec{l} 
+	\eqe
+	
+	\eqb
+		\vec{f_{p}} \cdot d\vec{l} = -dp 
+	\eqe
+	
+	Force due to gravity per unit volume:
+	\eqb
+		\vec{dF_{g}} = \rho dV \vec{g}
+	\eqe
+	
+	\eqb
+		\vec{f_g} = \rho  \vec{g}
+	\eqe
+	
+	The force due to the pressure difference is balanced by the weight:
+	
+	\eqb
+		\vec{f_p} = -\vec{f_{g}}
+	\eqe
+	
+
+	Taking integral on both sides:
+	\eqb
+		\int_{\vec{a}}^{\vec{b}} \vec{f_{g}} \cdot d\vec{l}
+			= \int_{\vec{a}}^{\vec{b}} dp 
+	\eqe
+	
+	\eqb
+		p(\vec{b}) - p(\vec{a}) = \int_{\vec{a}}^{\vec{b}} \vec{f_{g}} \cdot d\vec{l}
+	\eqe
+	
+	Because of this, the fluid at the bottom of arbitary shaped tank is the same.
+	
+	\eqb
+		p(\vec{b}) - p(\vec{a}) = \int_{\vec{a}}^{\vec{b}} \rho \vec{g} \cdot d\vec{l}
+	\eqe
+	
+	For constant density and gravity $\vec{g} = -g\vec{j}$:
+	\eqb
+		p(\vec{b}) - p(\vec{a}) = \rho g \int_{\vec{a}}^{\vec{b}} -\vec{j} \cdot d\vec{l}
+	\eqe
+	
+	\eqb
+		p(\vec{b}) - p(\vec{a}) = \rho g \int_{\vec{a}}^{\vec{b}} -\vec{j} \cdot d\vec{l}
+	\eqe
+	
